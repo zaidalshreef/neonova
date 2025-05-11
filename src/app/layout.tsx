@@ -21,7 +21,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} scroll-smooth`}>
-      <body>
+      <body className="neonova-bg">
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
