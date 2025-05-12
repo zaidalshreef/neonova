@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3'
 
 services:
   ########################################################################
@@ -17,67 +17,41 @@ services:
       options:
         max-size: "10m"
         max-file: "14"
-
-    # We scale only the "app" service:
-    deploy:
-      replicas: 3 # e.g. 2 for zero-downtime
-      update_config:
-        parallelism: 1 # Update one replica at a time
-        order: start-first # Start new before stopping old
-        failure_action: rollback # If update fails, revert automatically
-      restart_policy:
-        condition: on-failure
-      labels:
-        # Required for Traefik in swarmMode
-        - "traefik.enable=true"
-
-        # HTTPS router
-        - "traefik.http.routers.app.rule=Host(`neonova.sa`)"
-        - "traefik.http.routers.app.entrypoints=websecure"
-        - "traefik.http.routers.app.tls=true"
-        - "traefik.http.routers.app.tls.certresolver=myresolver"
-        - "traefik.http.services.app.loadbalancer.server.port=3000"
-
-        # HTTP router
-        - "traefik.http.routers.app-http.rule=Host(`neonova.sa`)"
-        - "traefik.http.routers.app-http.entrypoints=web"
-        - "traefik.http.routers.app-http.middlewares=redirect-to-https"
-
-        # Middleware for redirect
-        - "traefik.http.middlewares.redirect-to-https.redirectScheme.scheme=https"
-        - "traefik.http.middlewares.redirect-to-https.redirectScheme.permanent=true"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`neonova.sa`)"
+      - "traefik.http.routers.app.entrypoints=websecure"
+      - "traefik.http.routers.app.tls=true"
+      - "traefik.http.routers.app.tls.certresolver=myresolver"
+      - "traefik.http.services.app.loadbalancer.server.port=3000"
 
   ########################################################################
   # TRAEFIK (Reverse Proxy + Let's Encrypt auto SSL)
   ########################################################################
   traefik:
     image: traefik:v2
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--entrypoints.websecure.http.tls=true"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=your-email@example.com"
-      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-      - "--log.level=DEBUG" # Add this for troubleshooting
     ports:
       - "80:80"
       - "443:443"
+      - "8080:8080" # Traefik dashboard
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "./letsencrypt:/letsencrypt" # Make sure this directory exists
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+    command:
+      - "--api.insecure=true" # Enable dashboard
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.websecure.http.tls=true" # This enables TLS with the default cert
+      - "--log.level=DEBUG"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=zaidalshreef@gmail.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "14"
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        order: start-first
-      restart_policy:
-        condition: on-failure
