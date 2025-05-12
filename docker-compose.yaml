@@ -1,5 +1,6 @@
-services:
+version: "3.9"
 
+services:
   ########################################################################
   # NEXT.JS APPLICATION
   ########################################################################
@@ -10,18 +11,22 @@ services:
     restart: always
     networks:
       - "web"
+    # In Docker Swarm mode, 'ports:' is typically placed in the Traefik service
+    # or use "mode: host" or "mode: ingress" if you want direct exposure. 
+    # We'll let Traefik handle external ports, so we do not publish here.
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "14"
+
     # We scale only the "app" service:
     deploy:
-      replicas: 3 # e.g. 2 for zero-downtime
+      replicas: 3                 # e.g. 2 for zero-downtime
       update_config:
-        parallelism: 1 # Update one replica at a time
-        order: start-first # Start new before stopping old
-        failure_action: rollback # If update fails, revert automatically
+        parallelism: 1            # Update one replica at a time
+        order: start-first        # Start new before stopping old
+        failure_action: rollback  # If update fails, revert automatically
       restart_policy:
         condition: on-failure
       labels:
@@ -31,7 +36,7 @@ services:
         # HTTPS router
         - "traefik.http.routers.app.rule=Host(`neonova.sa`)"
         - "traefik.http.routers.app.entrypoints=websecure"
-        - "traefik.http.routers.app.tls=true"
+        - "traefik.http.routers.app.tls.certresolver=myresolver"
         - "traefik.http.services.app.loadbalancer.server.port=3000"
 
         # HTTP router
@@ -43,9 +48,7 @@ services:
         - "traefik.http.middlewares.redirect-to-https.redirectScheme.scheme=https"
         - "traefik.http.middlewares.redirect-to-https.redirectScheme.permanent=true"
 
-        # Add these labels if not already present
-        - "traefik.http.routers.app.rule=PathPrefix(`/`)"
-        - "traefik.http.services.app.loadbalancer.server.port=3000"
+
 
   ########################################################################
   # TRAEFIK (Reverse Proxy + Let's Encrypt auto SSL)
@@ -63,14 +66,11 @@ services:
 
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
-      - "--entrypoints.websecure.http.tls=true"
 
       - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
       - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-      - "--certificatesresolvers.myresolver.acme.email=zaidalshreef@gmail.com"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=your-email@example.com"
+      - "--certificatesresolvers.myresolver.acme.email=${TRAEFIK_ACME_EMAIL}"
     ports:
       - "80:80"
       - "443:443"
@@ -93,7 +93,10 @@ services:
       restart_policy:
         condition: on-failure
 
+########################################################################
+# NETWORKS & VOLUMES
+########################################################################
 networks:
   web:
-    driver: overlay
-    attachable: true
+    driver: overlay   # Swarm overlay network
+
