@@ -9,8 +9,6 @@ services:
     image: "ghcr.io/zaidalshreef/neonova:latest"
     # container_name: "nextjs-app"
     restart: always
-    networks:
-      - "web"
     # In Docker Swarm mode, 'ports:' is typically placed in the Traefik service
     # or use "mode: host" or "mode: ingress" if you want direct exposure. 
     # We'll let Traefik handle external ports, so we do not publish here.
@@ -78,8 +76,6 @@ services:
     volumes:
       - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    networks:
-      - "web"
     logging:
       driver: "json-file"
       options:
@@ -92,11 +88,4 @@ services:
         order: start-first
       restart_policy:
         condition: on-failure
-
-########################################################################
-# NETWORKS & VOLUMES
-########################################################################
-networks:
-  web:
-    driver: overlay   # Swarm overlay network
 
