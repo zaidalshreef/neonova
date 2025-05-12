@@ -1,0 +1,98 @@
+
+services:
+
+  ########################################################################
+  # NEXT.JS APPLICATION
+  ########################################################################
+  app:
+    # DO NOT USE build: in Swarm for rolling updates. Use an image from a registry:
+    image: "ghcr.io/zaidalshreef/shipment:latest"
+    # container_name: "nextjs-app"
+    restart: always
+    networks:
+      - "web"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "14"
+
+    # We scale only the "app" service:
+    deploy:
+      replicas: 3                 # e.g. 2 for zero-downtime
+      update_config:
+        parallelism: 1            # Update one replica at a time
+        order: start-first        # Start new before stopping old
+        failure_action: rollback  # If update fails, revert automatically
+      restart_policy:
+        condition: on-failure
+      labels:
+        # Required for Traefik in swarmMode
+        - "traefik.enable=true"
+
+        # HTTPS router
+        - "traefik.http.routers.app.rule=Host(`neonova.sa`)"
+        - "traefik.http.routers.app.entrypoints=websecure"
+        - "traefik.http.routers.app.tls.certresolver=myresolver"
+        - "traefik.http.services.app.loadbalancer.server.port=3000"
+
+        # HTTP router
+        - "traefik.http.routers.app-http.rule=Host(`neonova.sa`)"
+        - "traefik.http.routers.app-http.entrypoints=web"
+        - "traefik.http.routers.app-http.middlewares=redirect-to-https"
+
+        # Middleware for redirect
+        - "traefik.http.middlewares.redirect-to-https.redirectScheme.scheme=https"
+        - "traefik.http.middlewares.redirect-to-https.redirectScheme.permanent=true"
+
+  
+  
+  ########################################################################
+  # TRAEFIK (Reverse Proxy + Let's Encrypt auto SSL)
+  ########################################################################
+  traefik:
+    image: "traefik:latest"
+    # container_name: "traefik"
+    restart: always
+    command:
+      - "--api.dashboard=true"
+      - "--api.insecure=true"
+      - "--providers.swarm=true"
+      - "--providers.swarm.exposedbydefault=false"
+      - "--providers.swarm.network=web"
+
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+
+      - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.myresolver.acme.email=zaidalshreef@gmail.com"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080" # optional: Traefik dashboard
+    volumes:
+      - "./letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - "web"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "14"
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+      restart_policy:
+        condition: on-failure
+
+########################################################################
+# NETWORKS
+########################################################################
+networks:
+  web:
+    driver: overlay   # Swarm overlay network
