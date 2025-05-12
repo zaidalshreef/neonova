@@ -6,7 +6,7 @@ services:
   ########################################################################
   app:
     # DO NOT USE build: in Swarm for rolling updates. Use an image from a registry:
-    image: "ghcr.io/zaidalshreef/shipment:latest"
+    image: "ghcr.io/zaidalshreef/neonova:latest"
     # container_name: "nextjs-app"
     restart: always
     networks:
