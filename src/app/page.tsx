@@ -382,6 +382,419 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Digital Francis Services Section */}
+        <section id="digital-francis" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white">Digital Francis Services</h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+              <p className="max-w-3xl mx-auto text-lg">
+              Revolutionizing Infrastructure with Digital Francis Expertise
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+            <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Digital Forensics Lab</h3>
+                <p>Designed Saudi Arabia’s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
+              </div>
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Incident readiness and response services</h3>
+                <p>Proactive Defense. Rapid Response. Resilient Recovery.</p>
+              </div>
+
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Log & Artifact Analysis</h3>
+                <p>Investigate system, network, and application logs to trace attacker activity.
+                .</p>
+              </div>
+              
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Malware Analysis</h3>
+                <p>Examine malicious code to understand behavior, origin, and potential impact.
+                .</p>
+              </div>
+            </div>
+            <div className="flex justify-center mt-16">
+              <div className="relative w-64 h-64">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Infrastructure and Data Centers Section */}
+        <section id="infrastructure" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white">Infrastructure and Data Centers</h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              {/* Data Center Design and Build */}
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Data Center Design and Build</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Customized design and construction of state-of-the-art data center facilities tailored to specific business requirements.</p>
+              </div>
+              
+              {/* Managed Data Center Services */}
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Managed Data Center Services</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Comprehensive management of data center operations including monitoring, maintenance, and support to ensure high performance and reliability.</p>
+              </div>
+              
+              {/* Cloud Infrastructure Services */}
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Cloud Infrastructure Services</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Deployment and management of cloud-based solutions, including public, private, and hybrid cloud environments to enhance scalability and flexibility.</p>
+              </div>
+              
+              {/* Disaster Recovery Solutions */}
+              <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-800/50 hover:bg-blue-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Disaster Recovery Solutions</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Implementation of robust disaster recovery plans and data backup solutions to ensure business continuity and rapid recovery from disruptions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IoT and Emerging Technologies Section */}
+        <section id="iot" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white">Integration of IoT devices for real-time data collection.
+              </h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Designed Saudi Arabia’s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-800/50 hover:bg-purple-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Data analytics for improved city planning and resource management.
+                </h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Proactive Defense. Rapid Response. Resilient Recovery.
+                .</p>
+              </div>
+              
+              <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-800/50 hover:bg-purple-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Enhanced cybersecurity measures for protecting connected systems.
+                </h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Investigate system, network, and application logs to trace attacker activity.
+                .</p>
+              </div>
+              
+              <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-800/50 hover:bg-purple-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Enhanced cybersecurity</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Investigate system, network, and application logs to trace attacker activity.
+                .</p>
+              </div>
+              
+              <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-800/50 hover:bg-purple-800/30 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Smart infrastructure solutions to enhance urban living.
+                </h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Examine malicious code to understand behavior, origin, and potential impact.
+                .</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* NEONOVA Academy Section */}
+        <section id="academy" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white">NEONOVA Academy</h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Building National Cyber Talent through NEONOVA Academy
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300 flex flex-col items-center text-center h-full">
+                <div className="mb-6">
+                  <img 
+                    src="/images/logo.png" 
+                    alt="Cybersecurity Training" 
+                    className="w-12 h-12 mx-auto object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-center">
+                Cybersecurity Training & Certification Programs
+
+                </h3>
+                <div className="w-16 h-1 bg-white/50 mb-6 mx-auto"></div>
+                <p className="text-sm text-gray-300">
+                Structured courses aligned with global standards (e.g., CISSP, CEH, CompTIA) to develop skilled cyber professionals.
+                .
+                </p>
+              </div>
+              
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300 flex flex-col items-center text-center h-full">
+                <div className="mb-6">
+                  <img 
+                    src="/images/logo.png" 
+                    alt="Cybersecurity Awareness" 
+                    className="w-12 h-12 mx-auto object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-center">
+                Cybersecurity Awareness & Capacity Building Programs
+
+                </h3>
+                <div className="w-16 h-1 bg-white/50 mb-6 mx-auto"></div>
+                <p className="text-sm text-gray-300">
+                Practical, scenario-based training environments that allow participants to test skills in simulated cyberattack situations.
+                .
+                </p>
+              </div>
+              
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300 flex flex-col items-center text-center h-full">
+                <div className="mb-6">
+                  <img 
+                    src="/images/logo.png" 
+                    alt="Hands-on Labs" 
+                    className="w-12 h-12 mx-auto object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-center">
+                  Hands-on Labs & Real-World Simulation Exercises
+                </h3>
+                <div className="w-16 h-1 bg-white/50 mb-6 mx-auto"></div>
+                <p className="text-sm text-gray-300">
+                Programs designed to elevate cyber hygiene and awareness across organizations, from executives to end-users.
+                .
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technology & Innovation Section */}
+        <section id="technology" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Technology & Innovation</h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 mr-4 flex items-center justify-center rounded-full bg-blue-900/50">
+                    <img 
+                      src="/images/AI.png" 
+                      alt="AI Integration" 
+                      className="h-6 w-6 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold">AI Integration</h3>
+                </div>
+                <p className="text-gray-300 text-sm">Machine learning algorithms detect emerging threats.</p>
+              </div>
+              
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 mr-4 flex items-center justify-center rounded-full bg-blue-900/50">
+                    <img 
+                      src="/images/cloud.png" 
+                      alt="Hybrid Cloud" 
+                      className="h-6 w-6 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold">Hybrid Cloud</h3>
+                </div>
+                <p className="text-gray-300 text-sm">Flexible solutions reducing costs by 35%.</p>
+              </div>
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 mr-4 flex items-center justify-center rounded-full bg-blue-900/50">
+                    <img 
+                      src="/images/monitoring.png" 
+                      alt="24/7 Monitoring" 
+                      className="h-6 w-6 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold">24/7 Monitoring</h3>
+                </div>
+                <p className="text-gray-300 text-sm">Continuous vigilance against global threats.</p>
+              </div>
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 mr-4 flex items-center justify-center rounded-full bg-blue-900/50">
+                    <img 
+                      src="/images/Network.png" 
+                      alt="Network Security" 
+                      className="h-6 w-6 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold">Network Security</h3>
+                </div>
+                <p className="text-gray-300 text-sm">Specialized expertise in connectivity protection.</p>
+              </div>
+              
+              </div>
+              </div>
+        </section>
+
+        {/* Client Success Stories Section */}
+        <section id="success-stories" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white">Client Success Stories</h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              {/* Government Infrastructure */}
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Government Infrastructure</h3>
+                <p className="text-gray-300 text-sm">
+                  Deployed hybrid infrastructure for semi-government organization. Reduced operational costs by 35%.
+                </p>
+              </div>
+              
+              {/* Research Protection */}
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Research Protection</h3>
+                <p className="text-gray-300 text-sm">
+                  Implemented secure data management for genomic research facility. Enhanced processing efficiency.
+                </p>
+              </div>
+              
+              {/* Critical Security */}
+              <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
+                <h3 className="text-xl font-semibold mb-4">Critical Security</h3>
+                <p className="text-gray-300 text-sm">
+                  Delivered comprehensive frameworks for national infrastructure. Prevented multiple advanced threats.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose NeoNova Section */}
+        <section id="why-choose" className="py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              {/* Left: Text Content */}
+              <div className="w-full md:w-1/2">
+                <h2 className="text-4xl font-bold mb-8">Why Choose NeoNova</h2>
+                
+                <div className="space-y-6">
+                  {/* Reason 1 */}
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="font-bold">1</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">Vision 2030 Alignment</h3>
+                      <p className="text-gray-300">Deep commitment to Saudi Arabia's digital transformation goals.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Reason 2 */}
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="font-bold">2</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">Certified Expertise</h3>
+                      <p className="text-gray-300">Team holds industry-recognized qualifications and specialized training.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Reason 3 */}
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="font-bold">3</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">Capability Building</h3>
+                      <p className="text-gray-300">Comprehensive cybersecurity training programs for Saudi talents.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Reason 4 */}
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="font-bold">4</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">Trusted Partnership</h3>
+                      <p className="text-gray-300">Proven track record securing Saudi Arabia's digital assets.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right: Image */}
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="relative w-full max-w-md">
+                  <img
+                    src="/images/whyneonova.png"
+                    alt="Why Choose NeoNova"
+                    className="w-full h-auto rounded-lg shadow-lg border border-blue-800/30"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Section */}
+        <section className="text-white py-24 relative overflow-hidden bg-gradient-to-b from-transparent to-blue-950/20">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row items-center gap-16">
+              {/* Left: Content */}
+              <div className="w-full md:w-1/2">
+                <h2 className="text-3xl md:text-5xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-white">Our Trusted Partners</h2>
+                <div className="space-y-6 backdrop-blur-sm bg-blue-900/10 p-6 rounded-xl border border-blue-800/30">
+                  <p className="text-gray-300 text-lg">Collaborating with EY to enhance cybersecurity strategies.</p>
+                  <p className="text-gray-300 text-lg">CIMTRAK provides innovative data protection solutions.</p>
+                  <p className="text-gray-300 text-lg">Cloudflare helps us ensure robust on-line security.</p>
+                </div>
+              </div>
+              
+              {/* Right: Partner Logos */}
+              <div className="w-full md:w-1/2 flex flex-col items-center gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+                  <div className="flex justify-center items-center bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-blue-800/20">
+                    <img 
+                      src="/images/ey.png" 
+                      alt="EY" 
+                      className="h-20 object-contain filter drop-shadow-lg"
+                    />
+                  </div>
+                  <div className="flex justify-center items-center bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-blue-800/20">
+                    <img 
+                      src="/images/cimtrack.png" 
+                      alt="CIMTRAK" 
+                      className="h-20 object-contain filter drop-shadow-lg"
+                    />
+                  </div>
+                  <div className="flex justify-center items-center md:col-span-2 bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-blue-800/20">
+                    <img 
+                      src="/images/cloudflare.png" 
+                      alt="Cloudflare" 
+                      className="h-20 object-contain filter drop-shadow-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Footer with copyright only */}
         <footer className="text-white py-12 border-t border-white/10">
