@@ -890,13 +890,13 @@ export default function Home() {
                       className="h-45 w-auto object-contain filter brightness-150 drop-shadow-lg"
                     />
                   </div>
-                  <div className="flex justify-center items-center bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-blue-500/30 hover:bg-black/60 transition duration-300 shadow-lg">
+                  <div className="flex justify-center items-center bg-black/50 backdrop-blur-sm rounded-lg border border-blue-500/30 hover:bg-black/60 transition duration-300 shadow-lg">
                     <Image
                       src="/images/cimtrack.png"
                       alt="CIMTRAK"
-                      width={300}
-                      height={300}
-                      className="h-auto w-full max-w-[280px] object-contain filter brightness-150 drop-shadow-lg"
+                      width={450}
+                      height={450}
+                      className="h-auto w-full max-w-[450px] object-contain filter brightness-150 drop-shadow-lg"
                     />
                   </div>
                   <div className="flex justify-center items-center md:col-span-2 bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-blue-500/30 hover:bg-black/60 transition duration-300 shadow-lg">
