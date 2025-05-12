@@ -9,6 +9,8 @@ services:
     image: "ghcr.io/zaidalshreef/neonova:latest"
     # container_name: "nextjs-app"
     restart: always
+    networks:
+      - "web"
     logging:
       driver: "json-file"
       options:
@@ -73,6 +75,8 @@ services:
     volumes:
       - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - "web"
     logging:
       driver: "json-file"
       options:
@@ -86,3 +90,6 @@ services:
       restart_policy:
         condition: on-failure
 
+networks:
+  web:
+    driver: overlay  
