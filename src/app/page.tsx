@@ -1,11 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-import { LatestPost } from "~/app/_components/post";
-import { api, HydrateClient } from "~/trpc/server";
 
 // Navigation component that appears when scrolling down
 const Navigation = () => {
@@ -72,10 +68,12 @@ const Navbar = () => {
       {/* Decorative left-side images, tiled vertically */}
       <div className="absolute left-0 top-0 h-full flex flex-col justify-between z-10 pointer-events-none" style={{ width: '90px', paddingTop: '24px', paddingBottom: '24px' }}>
         {Array.from({ length: 6 }).map((_, i) => (
-          <img
+          <Image
             key={i}
             src="/images/image.png"
             alt="decorative left"
+            width={64}
+            height={64}
             className="w-16 h-auto mb-2 object-contain object-left"
             style={{ opacity: 0.7 }}
           />
@@ -84,10 +82,12 @@ const Navbar = () => {
       {/* Decorative right-side images, tiled vertically, quarter width of left */}
       <div className="absolute right-0 top-0 h-full flex flex-col justify-between z-10 pointer-events-none" style={{ width: '22px', paddingTop: '24px', paddingBottom: '24px' }}>
         {Array.from({ length: 3 }).map((_, i) => (
-          <img
+          <Image
             key={i}
             src="/images/image.png"
             alt="decorative right"
+            width={16}
+            height={64}
             className="w-4 h-auto mb-2 object-contain object-right"
             style={{ opacity: 0.5 }}
           />
@@ -113,7 +113,7 @@ const Navbar = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-lg">
               NeoNova leads cybersecurity excellence in Saudi Arabia.
-              We align with Vision 2030 to protect the Kingdom's digital landscape.
+              We align with Vision 2030 to protect the Kingdom&#39;s digital landscape.
               As trusted partners to government and private sectors, we deliver specialized
               security solutions for digital transformation.
             </p>
@@ -148,7 +148,7 @@ export default function Home() {
                 <div className="absolute -bottom-2 left-0 w-20 h-1 bg-blue-400"></div>
               </div>
               <p className="text-lg md:text-xl leading-relaxed max-w-xl backdrop-blur-sm bg-white/5 p-6 rounded-lg border-l-4 border-blue-400 shadow-lg">
-                To be Saudi Arabia's foremost partner in securing the digital future, empowering smart cities, critical infrastructure, and emerging technologies with cutting-edge cybersecurity solutions that drive national growth and resilience
+                To be Saudi Arabia&#39;s foremost partner in securing the digital future, empowering smart cities, critical infrastructure, and emerging technologies with cutting-edge cybersecurity solutions that drive national growth and resilience
               </p>
             </div>
 
@@ -163,7 +163,7 @@ export default function Home() {
                 <div className="absolute -bottom-2 left-0 w-20 h-1 bg-blue-400"></div>
               </div>
               <p className="text-lg md:text-xl leading-relaxed max-w-xl backdrop-blur-sm bg-white/5 p-6 rounded-lg border-l-4 border-blue-400 shadow-lg">
-                To provide innovative cybersecurity solutions that protect Saudi Arabia's digital landscape, empowering smart cities and critical infrastructure. We strive to enhance national security and resilience through collaboration and advanced technologies, driving sustainable growth for the future.
+                To provide innovative cybersecurity solutions that protect Saudi Arabia&#39;s digital landscape, empowering smart cities and critical infrastructure. We strive to enhance national security and resilience through collaboration and advanced technologies, driving sustainable growth for the future.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
                 <h3 className="text-2xl font-semibold text-white mb-4">National Commitment</h3>
                 <p className="text-gray-200">
-                  Supporting Saudi Arabia's strategic vision 2030 by nurturing local talent, advancing national capabilities, and safeguarding critical infrastructure
+                  Supporting Saudi Arabia&#39;s strategic vision 2030 by nurturing local talent, advancing national capabilities, and safeguarding critical infrastructure
                 </p>
               </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
                 <h3 className="text-2xl font-semibold text-white mb-4">Customer Centricity</h3>
                 <p className="text-gray-200">
-                  Tailored solutions to address the client's specific needs
+                  Tailored solutions to address the client&#39;s specific needs
                 </p>
               </div>
             </div>
@@ -231,9 +231,11 @@ export default function Home() {
               </div>
 
               <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-                <img
+                <Image
                   src="/images/saudi.png"
                   alt="Digital Saudi Arabia"
+                  width={800}
+                  height={600}
                   className="rounded-2xl shadow-2xl w-full max-w-xl h-auto object-contain border border-white/10"
                 />
               </div>
@@ -252,9 +254,11 @@ export default function Home() {
             <div className="relative max-w-5xl mx-auto">
               {/* Center Logo */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 z-10">
-                <img
+                <Image
                   src="/images/logo.png"
                   alt="NeoNova Logo"
+                  width={200}
+                  height={200}
                   className="w-4/5 h-4/5 object-contain"
                 />
               </div>
@@ -336,15 +340,19 @@ export default function Home() {
 
               <div className="w-full md:w-2/5 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-                <img
+                <Image
                   src="/images/threat.png"
                   alt="NeoNova Threat Detection Solution"
+                  width={600}
+                  height={400}
                   className="w-full h-auto object-contain relative z-10"
                 />
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-black/80 flex items-center justify-center rounded-md shadow-lg backdrop-blur-md border border-white/10">
-                  <img
+                  <Image
                     src="/images/logo.png"
                     alt="NeoNova Logo"
+                    width={120}
+                    height={120}
                     className="w-4/5 h-4/5 object-contain"
                   />
                 </div>
@@ -358,7 +366,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="w-full md:w-2/5">
-                <img
+                <Image
                   src="/images/cyper.png"
                   alt="NeoNova Cyber Threat Intelligence"
                   className="w-full h-auto object-contain"
@@ -374,7 +382,7 @@ export default function Home() {
                     By collecting and analyzing information about cyber threats, NeoNova - Threat Intelligence is an active protection method which aims to provide your organization a deeper understanding of threats.
                   </p>
                   <p>
-                    Using data collected in real-time from a variety of sources, NeoNova's - Threat Intelligence offers comprehensive and up-to-date scenarios of potential threats to your organization.
+                    Using data collected in real-time from a variety of sources, NeoNova&#39;s - Threat Intelligence offers comprehensive and up-to-date scenarios of potential threats to your organization.
                   </p>
                 </div>
 
@@ -395,37 +403,39 @@ export default function Home() {
                 Revolutionizing Infrastructure with Digital Francis Expertise
               </p>
             </div>
-            
+
             <div className="relative flex justify-center items-center mt-16 mb-20">
               {/* Center Logo */}
               <div className="absolute z-20 w-64 h-64 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg">
-                <img
+                <Image
                   src="/images/logo.png"
                   alt="NeoNova Logo"
+                  width={120}
+                  height={120}
                   className="w-3/5 h-3/5 object-contain"
                 />
               </div>
-              
+
               {/* Services arranged in a circle */}
               <div className="relative w-[700px] h-[700px]">
                 {/* Digital Forensics Lab - Top */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h2 className="text-xl font-semibold mb-4">Digital Forensics Lab</h2>
-                  <p>Designed Saudi Arabia's first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
+                  <p>Designed Saudi Arabia&#39;s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
                 </div>
-                
+
                 {/* Incident readiness - Right */}
                 <div className="absolute top-1/2 right-0 transform translate-x-1/3 -translate-y-1/2 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h3 className="text-xl font-semibold mb-4">Incident readiness and response services</h3>
                   <p>Proactive Defense. Rapid Response. Resilient Recovery.</p>
                 </div>
-                
+
                 {/* Log & Artifact Analysis - Bottom */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h3 className="text-xl font-semibold mb-4">Log & Artifact Analysis</h3>
                   <p>Investigate system, network, and application logs to trace attacker activity.</p>
                 </div>
-                
+
                 {/* Malware Analysis - Left */}
                 <div className="absolute top-1/2 left-0 transform -translate-x-1/3 -translate-y-1/2 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h3 className="text-xl font-semibold mb-4">Malware Analysis</h3>
@@ -443,7 +453,7 @@ export default function Home() {
               <h2 className="text-4xl font-bold text-white">Infrastructure and Data Centers</h2>
               <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {/* Data Center Design and Build */}
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
@@ -451,21 +461,21 @@ export default function Home() {
                 <div className="w-16 h-1 bg-white/50 mb-4"></div>
                 <p>Customized design and construction of state-of-the-art data center facilities tailored to specific business requirements.</p>
               </div>
-              
+
               {/* Managed Data Center Services */}
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-4">Managed Data Center Services</h3>
                 <div className="w-16 h-1 bg-white/50 mb-4"></div>
                 <p>Comprehensive management of data center operations including monitoring, maintenance, and support to ensure high performance and reliability.</p>
               </div>
-              
+
               {/* Cloud Infrastructure Services */}
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-4">Cloud Infrastructure Services</h3>
                 <div className="w-16 h-1 bg-white/50 mb-4"></div>
                 <p>Deployment and management of cloud-based solutions, including public, private, and hybrid cloud environments to enhance scalability and flexibility.</p>
               </div>
-              
+
               {/* Disaster Recovery Solutions */}
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-4">Disaster Recovery Solutions</h3>
@@ -480,50 +490,40 @@ export default function Home() {
         <section id="iot" className="py-20 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white">Integration of IoT devices for real-time data collection.
-              </h2>
+              <h2 className="text-4xl font-bold text-white">Integration of IoT devices for real-time data collection.</h2>
               <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Empowering smart cities with innovative IoT solutions.
-
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
-                <h3 className="text-xl font-semibold mb-4">Data analytics for improved city planning and resource management.
-                </h3>
-                <div className="w-16 h-1 bg-white/50 mb-4"></div>
-                <p>Proactive Defense. Rapid Response. Resilient Recovery.
-                .</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
-                <h3 className="text-xl font-semibold mb-4">Enhanced cybersecurity measures for protecting connected systems.
-                </h3>
-                <div className="w-16 h-1 bg-white/50 mb-4"></div>
-                <p>Investigate system, network, and application logs to trace attacker activity.
-                .</p>
-              </div>
-         
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Empowering smart cities with innovative IoT solutions.</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
- 
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Data analytics for improved city planning and resource management.</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Proactive Defense. Rapid Response. Resilient Recovery.</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
+                <h3 className="text-xl font-semibold mb-4">Enhanced cybersecurity measures for protecting connected systems.</h3>
+                <div className="w-16 h-1 bg-white/50 mb-4"></div>
+                <p>Investigate system, network, and application logs to trace attacker activity.</p>
+              </div>
+
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
+
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-4">Enhanced cybersecurity</h3>
                 <div className="w-16 h-1 bg-white/50 mb-4"></div>
-                <p>Investigate system, network, and application logs to trace attacker activity.
-                .</p>
+                <p>Investigate system, network, and application logs to trace attacker activity.</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center">
-                <h3 className="text-xl font-semibold mb-4">Smart infrastructure solutions to enhance urban living.
-                </h3>
+                <h3 className="text-xl font-semibold mb-4">Smart infrastructure solutions to enhance urban living.</h3>
                 <div className="w-16 h-1 bg-white/50 mb-4"></div>
-                <p>Examine malicious code to understand behavior, origin, and potential impact.
-                .</p>
+                <p>Examine malicious code to understand behavior, origin, and potential impact.</p>
               </div>
-              </div>
+            </div>
 
           </div>
         </section>
@@ -537,51 +537,57 @@ export default function Home() {
                 Building National Cyber Talent through NEONOVA Academy
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center h-full">
                 <div className="mb-6">
-                  <img 
-                    src="/images/logo.png" 
-                    alt="Cybersecurity Training" 
+                  <Image
+                    src="/images/logo.png"
+                    alt="Cybersecurity Training"
+                    width={48}
+                    height={48}
                     className="w-12 h-12 mx-auto object-contain"
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center">
-                Cybersecurity Training & Certification Programs
+                  Cybersecurity Training & Certification Programs
 
                 </h3>
                 <div className="w-16 h-1 bg-white/50 mb-6 mx-auto"></div>
                 <p className="text-sm text-gray-300">
-                Structured courses aligned with global standards (e.g., CISSP, CEH, CompTIA) to develop skilled cyber professionals.
-                .
+                  Structured courses aligned with global standards (e.g., CISSP, CEH, CompTIA) to develop skilled cyber professionals.
+                  .
                 </p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center h-full">
                 <div className="mb-6">
-                  <img 
-                    src="/images/logo.png" 
-                    alt="Cybersecurity Awareness" 
+                  <Image
+                    src="/images/logo.png"
+                    alt="Cybersecurity Awareness"
+                    width={48}
+                    height={48}
                     className="w-12 h-12 mx-auto object-contain"
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center">
-                Cybersecurity Awareness & Capacity Building Programs
+                  Cybersecurity Awareness & Capacity Building Programs
 
                 </h3>
                 <div className="w-16 h-1 bg-white/50 mb-6 mx-auto"></div>
                 <p className="text-sm text-gray-300">
-                Practical, scenario-based training environments that allow participants to test skills in simulated cyberattack situations.
-                .
+                  Practical, scenario-based training environments that allow participants to test skills in simulated cyberattack situations.
+                  .
                 </p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 flex flex-col items-center text-center h-full">
                 <div className="mb-6">
-                  <img 
-                    src="/images/logo.png" 
-                    alt="Hands-on Labs" 
+                  <Image
+                    src="/images/logo.png"
+                    alt="Hands-on Labs"
+                    width={48}
+                    height={48}
                     className="w-12 h-12 mx-auto object-contain"
                   />
                 </div>
@@ -590,8 +596,8 @@ export default function Home() {
                 </h3>
                 <div className="w-16 h-1 bg-white/50 mb-6 mx-auto"></div>
                 <p className="text-sm text-gray-300">
-                Programs designed to elevate cyber hygiene and awareness across organizations, from executives to end-users.
-                .
+                  Programs designed to elevate cyber hygiene and awareness across organizations, from executives to end-users.
+                  .
                 </p>
               </div>
             </div>
@@ -605,14 +611,16 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Technology & Innovation</h2>
               <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
-                    <img 
-                      src="/images/AI.png" 
-                      alt="AI Integration" 
+                    <Image
+                      src="/images/AI.png"
+                      alt="AI Integration"
+                      width={80}
+                      height={80}
                       className="h-20 w-20 object-contain"
                     />
                   </div>
@@ -620,13 +628,15 @@ export default function Home() {
                 </div>
                 <p className="text-gray-300 text-sm">Machine learning algorithms detect emerging threats.</p>
               </div>
-              
+
               <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
                 <div className="flex items-center mb-4">
-                <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
-                <img 
-                      src="/images/cloud.png" 
-                      alt="Hybrid Cloud" 
+                  <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
+                    <Image
+                      src="/images/cloud.png"
+                      alt="Hybrid Cloud"
+                      width={80}
+                      height={80}
                       className="h-20 w-20 object-contain"
                     />
                   </div>
@@ -636,10 +646,12 @@ export default function Home() {
               </div>
               <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
                 <div className="flex items-center mb-4">
-                <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
-                <img 
-                      src="/images/monitoring.png" 
-                      alt="24/7 Monitoring" 
+                  <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
+                    <Image
+                      src="/images/monitoring.png"
+                      alt="24/7 Monitoring"
+                      width={80}
+                      height={80}
                       className="h-20 w-20 object-contain"
                     />
                   </div>
@@ -649,10 +661,12 @@ export default function Home() {
               </div>
               <div className="bg-black/60 p-8 rounded-lg border border-purple-800/50 hover:bg-black/70 transition duration-300">
                 <div className="flex items-center mb-4">
-                <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
-                <img 
-                      src="/images/Network.png" 
-                      alt="Network Security" 
+                  <div className="w-20 h-20 mr-4 flex items-center justify-center rounded-full">
+                    <Image
+                      src="/images/Network.png"
+                      alt="Network Security"
+                      width={80}
+                      height={80}
                       className="h-20 w-20 object-contain"
                     />
                   </div>
@@ -660,9 +674,9 @@ export default function Home() {
                 </div>
                 <p className="text-gray-300 text-sm">Specialized expertise in connectivity protection.</p>
               </div>
-              
-              </div>
-              </div>
+
+            </div>
+          </div>
         </section>
 
         {/* Client Success Stories Section */}
@@ -672,11 +686,11 @@ export default function Home() {
               <h2 className="text-4xl font-bold text-white">Client Success Stories</h2>
               <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
             </div>
-            
+
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>
-              
+
               {/* Government Infrastructure */}
               <div className="flex flex-col md:flex-row items-center mb-16 relative">
                 <div className="w-full md:w-1/2 md:pr-12 md:text-right">
@@ -690,7 +704,7 @@ export default function Home() {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-black z-10"></div>
                 <div className="w-full md:w-1/2 md:pl-12 hidden md:block"></div>
               </div>
-              
+
               {/* Research Protection */}
               <div className="flex flex-col md:flex-row items-center mb-16 relative">
                 <div className="w-full md:w-1/2 md:pr-12 hidden md:block"></div>
@@ -704,7 +718,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Critical Security */}
               <div className="flex flex-col md:flex-row items-center relative">
                 <div className="w-full md:w-1/2 md:pr-12 md:text-right">
@@ -729,7 +743,7 @@ export default function Home() {
               {/* Left: Text Content */}
               <div className="w-full md:w-1/2">
                 <h2 className="text-4xl font-bold mb-8">Why Choose NeoNova</h2>
-                
+
                 <div className="space-y-6">
                   {/* Reason 1 */}
                   <div className="flex items-start gap-4">
@@ -738,10 +752,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">Vision 2030 Alignment</h3>
-                      <p className="text-gray-300">Deep commitment to Saudi Arabia's digital transformation goals.</p>
+                      <p className="text-gray-300">Deep commitment to Saudi Arabia&#39;s digital transformation goals.</p>
                     </div>
                   </div>
-                  
+
                   {/* Reason 2 */}
                   <div className="flex items-start gap-4">
                     <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
@@ -752,7 +766,7 @@ export default function Home() {
                       <p className="text-gray-300">Team holds industry-recognized qualifications and specialized training.</p>
                     </div>
                   </div>
-                  
+
                   {/* Reason 3 */}
                   <div className="flex items-start gap-4">
                     <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
@@ -763,7 +777,7 @@ export default function Home() {
                       <p className="text-gray-300">Comprehensive cybersecurity training programs for Saudi talents.</p>
                     </div>
                   </div>
-                  
+
                   {/* Reason 4 */}
                   <div className="flex items-start gap-4">
                     <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
@@ -771,16 +785,16 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">Trusted Partnership</h3>
-                      <p className="text-gray-300">Proven track record securing Saudi Arabia's digital assets.</p>
+                      <p className="text-gray-300">Proven track record securing Saudi Arabia&#39;s digital assets.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               {/* Right: Image */}
               <div className="w-full md:w-1/2 flex justify-center">
                 <div className="relative w-full max-w-md">
-                  <img
+                  <Image
                     src="/images/whyneonova.png"
                     alt="Why Choose NeoNova"
                     className="w-full h-auto rounded-lg shadow-lg border border-blue-800/30"
@@ -805,28 +819,34 @@ export default function Home() {
                   <p className="text-white text-lg">Cloudflare helps us ensure robust on-line security.</p>
                 </div>
               </div>
-              
+
               {/* Right: Partner Logos */}
               <div className="w-full md:w-1/2 flex flex-col items-center gap-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
                   <div className="flex justify-center items-center bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
-                    <img 
-                      src="/images/ey.png" 
-                      alt="EY" 
+                    <Image
+                      src="/images/ey.png"
+                      alt="EY"
+                      width={80}
+                      height={80}
                       className="h-20 object-contain filter drop-shadow-lg"
                     />
                   </div>
                   <div className="flex justify-center items-center bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
-                    <img 
-                      src="/images/cimtrack.png" 
-                      alt="CIMTRAK" 
+                    <Image
+                      src="/images/cimtrack.png"
+                      alt="CIMTRAK"
+                      width={80}
+                      height={80}
                       className="h-20 object-contain filter drop-shadow-lg"
                     />
                   </div>
                   <div className="flex justify-center items-center md:col-span-2 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
-                    <img 
-                      src="/images/cloudflare.png" 
-                      alt="Cloudflare" 
+                    <Image
+                      src="/images/cloudflare.png"
+                      alt="Cloudflare"
+                      width={80}
+                      height={80}
                       className="h-20 object-contain filter drop-shadow-lg"
                     />
                   </div>
