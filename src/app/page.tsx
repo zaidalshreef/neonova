@@ -350,13 +350,13 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold mb-8 border-b border-white/20 pb-2 inline-block">Threat detection and response</h3>
 
                 <div className="space-y-6 text-lg backdrop-blur-sm bg-black/10 p-6 rounded-lg border border-white/10">
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed text-sm sm:text-base md:text-lg">
                     A next-gen IT/OT/IoT SOC of NeoNova, effectively works and significantly reduces the response time to threats by applying Artificial Intelligence technologies, Machine Learning and Big-Data to automate business processes and improve investigation capabilities.
                   </p>
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed text-sm sm:text-base md:text-lg">
                     NeoNova connects/collects all resources through agents/ log forwarders, setting up passive information collection points (SPAN/ TAP/Network broker, etc.), and using connectors/APIs for non-standard data types.
                   </p>
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed text-sm sm:text-base md:text-lg">
                     NeoNova uses Big-Data platform and various AI/ML applied engines with advanced algorithms and models for centralization and automation. NeoNova also provides continuous and comprehensive Cyber Security scenarios to help your organization respond timely to incidents. This is an important element of Adaptive Security Architecture.
                   </p>
                 </div>
@@ -364,16 +364,16 @@ export default function Home() {
                 <div className="mt-10 space-y-4 bg-gradient-to-r from-blue-900/30 to-transparent p-6 rounded-lg">
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
-                    <p className="font-semibold text-xl">PROACTIVE, CONTINUOUS, AUTOMATIC AND COMPREHENSIVE MONITORING</p>
+                    <p className="font-semibold text-sm sm:text-base md:text-xl">PROACTIVE, CONTINUOUS, AUTOMATIC AND COMPREHENSIVE MONITORING</p>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
-                    <p className="font-semibold text-xl">TIME ANALYZING, ALERTING AND RESPONDING TO THREATS</p>
+                    <p className="font-semibold text-sm sm:text-base md:text-xl">TIME ANALYZING, ALERTING AND RESPONDING TO THREATS</p>
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-2/5 relative">
+              <div className="w-full md:w-2/5 relative mt-10 md:mt-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
                 <Image
                   src="/images/threat.png"
@@ -382,13 +382,13 @@ export default function Home() {
                   height={400}
                   className="w-full h-auto object-contain relative z-10"
                 />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-black/50 flex items-center justify-center rounded-md shadow-xl backdrop-blur-md border border-white/20 z-20 hover:bg-black/30 transition-all duration-300" style={{ boxShadow: '0 0 15px rgba(255, 255, 255, 0.2)' }}>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[88px] h-[88px] sm:w-20 sm:h-20 md:w-16 md:h-16 lg:w-24 lg:h-24 xl:w-28 xl:h-28 bg-black/50 flex items-center justify-center rounded-md shadow-xl backdrop-blur-md border border-white/20 z-20 hover:bg-black/30 transition-all duration-300" style={{ boxShadow: '0 0 15px rgba(255, 255, 255, 0.2)' }}>
                   <Image
                     src="/images/logo.png"
                     alt="NeoNova Logo"
-                    width={140}
-                    height={140}
-                    className="w-full h-full object-contain drop-shadow-lg"
+                    width={80}
+                    height={80}
+                    className="w-3/4 h-3/4 object-contain drop-shadow-lg"
                   />
                 </div>
               </div>
