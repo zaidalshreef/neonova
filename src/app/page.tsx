@@ -278,20 +278,10 @@ export default function Home() {
         {/* Products and Services Section */}
         <section id="products" className="py-20 text-white">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="w-full md:w-1/2 text-left">
+            <div className="flex justify-center items-center">
+              <div className="text-center">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Products and Services</h2>
-                <div className="w-24 h-1 bg-white mt-4 mb-8"></div>
-              </div>
-
-              <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-                <Image
-                  src="/images/saudi.png"
-                  alt="Digital Saudi Arabia"
-                  width={800}
-                  height={600}
-                  className="rounded-2xl shadow-2xl w-full max-w-xl h-auto object-contain border border-white/10"
-                />
+                <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
               </div>
             </div>
           </div>
@@ -306,16 +296,7 @@ export default function Home() {
             </div>
 
             <div className="relative max-w-5xl mx-auto">
-              {/* Center Logo */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 z-10">
-                <Image
-                  src="/images/logo.png"
-                  alt="NeoNova Logo"
-                  width={140}
-                  height={140}
-                  className="w-full h-full object-contain drop-shadow-lg"
-                />
-              </div>
+
 
               {/* Services */}
               <div className="grid grid-cols-2 gap-8 md:gap-16">
@@ -795,68 +776,53 @@ export default function Home() {
         {/* Why Choose NeoNova Section */}
         <section id="why-choose" className="py-20 text-white">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              {/* Left: Text Content */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-4xl font-bold mb-8">Why Choose NeoNova</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Why Choose NeoNova</h2>
+              <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
+            </div>
 
-                <div className="space-y-6">
-                  {/* Reason 1 */}
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="font-bold">1</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">Vision 2030 Alignment</h3>
-                      <p className="text-gray-300">Deep commitment to Saudi Arabia&#39;s digital transformation goals.</p>
-                    </div>
+            <div className="max-w-4xl mx-auto">
+              {/* Reason 1 - Left */}
+              <div className="flex flex-col md:flex-row items-center mb-16">
+                <div className="w-full md:w-1/2 md:pr-8">
+                  <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-500/30 shadow-lg">
+                    <h3 className="text-xl font-semibold mb-3">Vision 2030 Alignment</h3>
+                    <p className="text-gray-300">Deep commitment to Saudi Arabia's digital transformation goals.</p>
                   </div>
+                </div>
+                <div className="hidden md:block w-full md:w-1/2"></div>
+              </div>
 
-                  {/* Reason 2 */}
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="font-bold">2</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">Certified Expertise</h3>
-                      <p className="text-gray-300">Team holds industry-recognized qualifications and specialized training.</p>
-                    </div>
-                  </div>
-
-                  {/* Reason 3 */}
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="font-bold">3</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">Capability Building</h3>
-                      <p className="text-gray-300">Comprehensive cybersecurity training programs for Saudi talents.</p>
-                    </div>
-                  </div>
-
-                  {/* Reason 4 */}
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-900/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="font-bold">4</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">Trusted Partnership</h3>
-                      <p className="text-gray-300">Proven track record securing Saudi Arabia&#39;s digital assets.</p>
-                    </div>
+              {/* Reason 2 - Right */}
+              <div className="flex flex-col md:flex-row items-center mb-16">
+                <div className="hidden md:block w-full md:w-1/2"></div>
+                <div className="w-full md:w-1/2 md:pl-8">
+                  <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-500/30 shadow-lg">
+                    <h3 className="text-xl font-semibold mb-3">Certified Expertise</h3>
+                    <p className="text-gray-300">Team holds industry-recognized qualifications and specialized training.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Right: Image */}
-              <div className="w-full md:w-1/2 flex justify-center">
-                <div className="relative w-full max-w-md">
-                  <Image
-                    src="/images/whyneonova.png"
-                    alt="Why Choose NeoNova"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto rounded-lg shadow-lg border border-blue-800/30"
-                  />
+              {/* Reason 3 - Left */}
+              <div className="flex flex-col md:flex-row items-center mb-16">
+                <div className="w-full md:w-1/2 md:pr-8">
+                  <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-500/30 shadow-lg">
+                    <h3 className="text-xl font-semibold mb-3">Capability Building</h3>
+                    <p className="text-gray-300">Comprehensive cybersecurity training programs for Saudi talents.</p>
+                  </div>
+                </div>
+                <div className="hidden md:block w-full md:w-1/2"></div>
+              </div>
+
+              {/* Reason 4 - Right */}
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="hidden md:block w-full md:w-1/2"></div>
+                <div className="w-full md:w-1/2 md:pl-8">
+                  <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-500/30 shadow-lg">
+                    <h3 className="text-xl font-semibold mb-3">Trusted Partnership</h3>
+                    <p className="text-gray-300">Proven track record securing Saudi Arabia's digital assets.</p>
+                  </div>
                 </div>
               </div>
             </div>
