@@ -433,7 +433,7 @@ export default function Home() {
         {/* Digital Francis Services Section */}
         <section id="digital-francis" className="py-20 text-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white">Digital Francis Services</h2>
               <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
               <p className="max-w-3xl mx-auto text-lg">
@@ -441,7 +441,43 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative flex justify-center items-center mt-16 mb-20">
+            {/* Mobile view - vertical stack */}
+            <div className="md:hidden flex flex-col gap-6">
+              {/* Center Logo for mobile */}
+              <div className="flex justify-center mb-8">
+                <Image
+                  src="/images/logo.png"
+                  alt="NeoNova Logo"
+                  width={100}
+                  height={100}
+                  className="object-contain drop-shadow-lg"
+                />
+              </div>
+
+              {/* Stacked service boxes for mobile */}
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <h3 className="text-xl font-semibold mb-4">Digital Forensics Lab</h3>
+                <p>Designed Saudi Arabia&apos;s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <h3 className="text-xl font-semibold mb-4">Incident readiness and response services</h3>
+                <p>Proactive Defense. Rapid Response. Resilient Recovery.</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <h3 className="text-xl font-semibold mb-4">Log & Artifact Analysis</h3>
+                <p>Investigate system, network, and application logs to trace attacker activity.</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <h3 className="text-xl font-semibold mb-4">Malware Analysis</h3>
+                <p>Examine malicious code to understand behavior, origin, and potential impact.</p>
+              </div>
+            </div>
+
+            {/* Desktop view - circular layout */}
+            <div className="hidden md:flex justify-center items-center mt-16 mb-20 relative">
               {/* Center Logo */}
               <div className="absolute z-20 flex items-center justify-center">
                 <Image
@@ -453,30 +489,30 @@ export default function Home() {
                 />
               </div>
 
-              {/* Services arranged in a circle */}
-              <div className="relative w-[700px] h-[700px]">
+              {/* Services arranged in a circle - responsive width */}
+              <div className="relative w-full max-w-[700px] h-[500px] lg:h-[700px]">
                 {/* Digital Forensics Lab - Top */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
-                  <h2 className="text-xl font-semibold mb-4">Digital Forensics Lab</h2>
-                  <p>Designed Saudi Arabia&apos;s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-64 lg:w-72 bg-white/10 backdrop-blur-sm p-6 lg:p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                  <h3 className="text-xl font-semibold mb-4">Digital Forensics Lab</h3>
+                  <p className="text-sm lg:text-base">Designed Saudi Arabia&apos;s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
                 </div>
 
                 {/* Incident readiness - Right */}
-                <div className="absolute top-1/2 right-0 transform translate-x-1/3 -translate-y-1/2 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <div className="absolute top-1/2 right-0 transform translate-x-1/4 lg:translate-x-1/3 -translate-y-1/2 w-64 lg:w-72 bg-white/10 backdrop-blur-sm p-6 lg:p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h3 className="text-xl font-semibold mb-4">Incident readiness and response services</h3>
-                  <p>Proactive Defense. Rapid Response. Resilient Recovery.</p>
+                  <p className="text-sm lg:text-base">Proactive Defense. Rapid Response. Resilient Recovery.</p>
                 </div>
 
                 {/* Log & Artifact Analysis - Bottom */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 w-64 lg:w-72 bg-white/10 backdrop-blur-sm p-6 lg:p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h3 className="text-xl font-semibold mb-4">Log & Artifact Analysis</h3>
-                  <p>Investigate system, network, and application logs to trace attacker activity.</p>
+                  <p className="text-sm lg:text-base">Investigate system, network, and application logs to trace attacker activity.</p>
                 </div>
 
                 {/* Malware Analysis - Left */}
-                <div className="absolute top-1/2 left-0 transform -translate-x-1/3 -translate-y-1/2 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
+                <div className="absolute top-1/2 left-0 transform -translate-x-1/4 lg:-translate-x-1/3 -translate-y-1/2 w-64 lg:w-72 bg-white/10 backdrop-blur-sm p-6 lg:p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h3 className="text-xl font-semibold mb-4">Malware Analysis</h3>
-                  <p>Examine malicious code to understand behavior, origin, and potential impact.</p>
+                  <p className="text-sm lg:text-base">Examine malicious code to understand behavior, origin, and potential impact.</p>
                 </div>
               </div>
             </div>
