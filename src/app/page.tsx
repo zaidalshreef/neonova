@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Navigation component that appears from the beginning
 const Navigation = () => {
@@ -167,7 +167,7 @@ const Navbar = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-lg">
               NeoNova leads cybersecurity excellence in Saudi Arabia.
-              We align with Vision 2030 to protect the Kingdom&#39;s digital landscape.
+              We align with Vision 2030 to protect the Kingdom&apos;s digital landscape.
               As trusted partners to government and private sectors, we deliver specialized
               security solutions for digital transformation.
             </p>
@@ -202,7 +202,7 @@ export default function Home() {
                 <div className="absolute -bottom-2 left-0 w-20 h-1 bg-blue-400"></div>
               </div>
               <p className="text-lg md:text-xl leading-relaxed max-w-xl backdrop-blur-sm bg-white/5 p-6 rounded-lg border-l-4 border-blue-400 shadow-lg">
-                To be Saudi Arabia&#39;s foremost partner in securing the digital future, empowering smart cities, critical infrastructure, and emerging technologies with cutting-edge cybersecurity solutions that drive national growth and resilience
+                To be Saudi Arabia&apos;s foremost partner in securing the digital future, empowering smart cities, critical infrastructure, and emerging technologies with cutting-edge cybersecurity solutions that drive national growth and resilience
               </p>
             </div>
 
@@ -217,7 +217,7 @@ export default function Home() {
                 <div className="absolute -bottom-2 left-0 w-20 h-1 bg-blue-400"></div>
               </div>
               <p className="text-lg md:text-xl leading-relaxed max-w-xl backdrop-blur-sm bg-white/5 p-6 rounded-lg border-l-4 border-blue-400 shadow-lg">
-                To provide innovative cybersecurity solutions that protect Saudi Arabia&#39;s digital landscape, empowering smart cities and critical infrastructure. We strive to enhance national security and resilience through collaboration and advanced technologies, driving sustainable growth for the future.
+                To provide innovative cybersecurity solutions that protect Saudi Arabia&apos;s digital landscape, empowering smart cities and critical infrastructure. We strive to enhance national security and resilience through collaboration and advanced technologies, driving sustainable growth for the future.
               </p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
                 <h3 className="text-2xl font-semibold text-white mb-4">National Commitment</h3>
                 <p className="text-gray-200">
-                  Supporting Saudi Arabia&#39;s strategic vision 2030 by nurturing local talent, advancing national capabilities, and safeguarding critical infrastructure
+                  Supporting Saudi Arabia&apos;s strategic vision 2030 by nurturing local talent, advancing national capabilities, and safeguarding critical infrastructure
                 </p>
               </div>
 
@@ -268,7 +268,7 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300">
                 <h3 className="text-2xl font-semibold text-white mb-4">Customer Centricity</h3>
                 <p className="text-gray-200">
-                  Tailored solutions to address the client&#39;s specific needs
+                  Tailored solutions to address the client&apos;s specific needs
                 </p>
               </div>
             </div>
@@ -419,7 +419,7 @@ export default function Home() {
                     By collecting and analyzing information about cyber threats, NeoNova - Threat Intelligence is an active protection method which aims to provide your organization a deeper understanding of threats.
                   </p>
                   <p>
-                    Using data collected in real-time from a variety of sources, NeoNova&#39;s - Threat Intelligence offers comprehensive and up-to-date scenarios of potential threats to your organization.
+                    Using data collected in real-time from a variety of sources, NeoNova&apos;s - Threat Intelligence offers comprehensive and up-to-date scenarios of potential threats to your organization.
                   </p>
                 </div>
 
@@ -458,7 +458,7 @@ export default function Home() {
                 {/* Digital Forensics Lab - Top */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-72 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/15 transition duration-300 shadow-xl">
                   <h2 className="text-xl font-semibold mb-4">Digital Forensics Lab</h2>
-                  <p>Designed Saudi Arabia&#39;s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
+                  <p>Designed Saudi Arabia&apos;s first public Digital Forensics Lab for organizations, adhering to ISO 17025 standards.</p>
                 </div>
 
                 {/* Incident readiness - Right */}
@@ -787,7 +787,7 @@ export default function Home() {
                 <div className="w-full md:w-1/2 md:pr-8">
                   <div className="bg-blue-900/30 p-6 rounded-lg border border-blue-500/30 shadow-lg">
                     <h3 className="text-xl font-semibold mb-3">Vision 2030 Alignment</h3>
-                    <p className="text-gray-300">Deep commitment to Saudi Arabia's digital transformation goals.</p>
+                    <p className="text-gray-300">Deep commitment to Saudi Arabia&apos;s digital transformation goals.</p>
                   </div>
                 </div>
                 <div className="hidden md:block w-full md:w-1/2"></div>
@@ -821,7 +821,7 @@ export default function Home() {
                 <div className="w-full md:w-1/2 md:pl-8">
                   <div className="bg-purple-900/30 p-6 rounded-lg border border-purple-500/30 shadow-lg">
                     <h3 className="text-xl font-semibold mb-3">Trusted Partnership</h3>
-                    <p className="text-gray-300">Proven track record securing Saudi Arabia's digital assets.</p>
+                    <p className="text-gray-300">Proven track record securing Saudi Arabia&apos;s digital assets.</p>
                   </div>
                 </div>
               </div>
