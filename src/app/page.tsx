@@ -49,7 +49,7 @@ const Navigation = () => {
                 <a href="#cybersecurity" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">Cybersecurity</a>
                 <a href="#threat-detection" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">Threat Detection</a>
                 <a href="#threat-intelligence" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">Threat Intelligence</a>
-                <a href="#digital-francis" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">Digital Francis</a>
+                <a href="#digital-Forensics" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">Digital Forensics</a>
                 <a href="#infrastructure" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">Infrastructure</a>
                 <a href="#iot" className="block px-4 py-2 text-sm text-white hover:bg-white/10" role="menuitem">IoT Solutions</a>
               </div>
@@ -99,7 +99,7 @@ const Navigation = () => {
               <a href="#cybersecurity" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">Cybersecurity</a>
               <a href="#threat-detection" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">Threat Detection</a>
               <a href="#threat-intelligence" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">Threat Intelligence</a>
-              <a href="#digital-francis" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">Digital Francis</a>
+              <a href="#digital-Forensics" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">Digital Forensics</a>
               <a href="#infrastructure" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">Infrastructure</a>
               <a href="#iot" className="block pl-8 pr-3 py-2 text-sm text-white hover:bg-white/10 rounded-md">IoT Solutions</a>
             </div>
@@ -430,14 +430,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Digital Francis Services Section */}
-        <section id="digital-francis" className="py-20 text-white">
+        {/* Digital Forensics Services Section */}
+        <section id="digital-Forensics" className="py-20 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white">Digital Francis Services</h2>
+              <h2 className="text-4xl font-bold text-white">Digital Forensics Services</h2>
               <div className="w-24 h-1 bg-white mx-auto mt-4 mb-8"></div>
               <p className="max-w-3xl mx-auto text-lg">
-                Revolutionizing Infrastructure with Digital Francis Expertise
+                Revolutionizing Infrastructure with Digital Forensics Expertise
               </p>
             </div>
 
@@ -950,7 +950,7 @@ export default function Home() {
                   <a href="#values" className="text-gray-300 hover:text-white transition">Core Values</a>
                   <a href="#products" className="text-gray-300 hover:text-white transition">Products</a>
                   <a href="#cybersecurity" className="text-gray-300 hover:text-white transition">Cybersecurity</a>
-                  <a href="#digital-francis" className="text-gray-300 hover:text-white transition">Digital Francis</a>
+                  <a href="#digital-Forensics" className="text-gray-300 hover:text-white transition">Digital Forensics</a>
                 </div>
               </div>
 
